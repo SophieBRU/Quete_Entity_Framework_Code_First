@@ -18,7 +18,7 @@ namespace Quete_EntityFrameWorkCodeFirst
         {
             // I add a connection to a database instance while the context configures
             optionsBuilder.UseSqlServer(
-                @"Server=DESKTOP-F2GQDM4\SQLEXPRESS;Database=Saving;Integrated Security=True");
+                @"Server=LOCALHOST\SQLEXPRESS;Database=Saving;Integrated Security=True");
         }
     }
 }
