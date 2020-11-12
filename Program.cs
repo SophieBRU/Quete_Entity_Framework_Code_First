@@ -12,9 +12,8 @@ namespace Quete_EntityFrameWorkCodeFirst
         {
             using (var context = new SavingContext())
             {
-                // I wipe out my database at each execution
                 context.Database.EnsureDeleted();
-                // Then I recreate it
+                
                 context.Database.EnsureCreated();
 
                 var person = new Person
@@ -30,11 +29,9 @@ namespace Quete_EntityFrameWorkCodeFirst
                 };
 
                 context.Add(person);
-                // After the shop is added, his relatonships will too
-                // if they are defined          
+       
                 context.SaveChanges();
-                // Once changes are added, they must be saved to the database
-                // unless you will have an unexisting one 
+
 
                 SavingCalculator savingCalculator = new SavingCalculator();
                 DateTime end = DateTime.Now;
